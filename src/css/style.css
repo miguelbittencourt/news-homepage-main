@@ -21,25 +21,30 @@ p{
     max-width: 1440px;
 }
 
-.menu-button{
+#menu-button{
     display: none;
-    cursor: pointer;
-}
-
-.menu{
-    display: flex;
-    column-gap: 40px;
-    align-items: flex-end;
 }
 
 .menu ul{
+    display: flex;
+    column-gap: 40px;
+    align-items: flex-end;
+    opacity: 1;
+    z-index: auto;
+}
+
+.menu ul li{
     cursor: pointer;
     font-size: 1rem;
     list-style: none;
 }
 
-.menu ul:hover{
+.menu ul li:hover{
     color: #e76865;
+}
+
+.header nav #menu-close {
+    display: none;
 }
 
 .container{

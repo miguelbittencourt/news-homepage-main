@@ -8,6 +8,29 @@
         max-width: 350px;
         width: 350px;
         margin: 20px auto 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+      
+    .header nav.open {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 75vw;
+        background-color: white;
+        padding: 1.25rem;
+        opacity: 1;
+        z-index: 99999;
+      }
+      
+    .header nav ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .header .logo img{
@@ -15,14 +38,39 @@
     }
 
     .menu{
-        display: none;
+        display: flex;
         flex-direction: column;
-        row-gap: 20px;
+        column-gap: 40px;
+        align-items: flex-end;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        z-index: -999;
     }
 
-    .header .menu-button{
+    .header #menu-button{
         display: block;
+        cursor: pointer;
+        z-index: 99;
     }
+
+    .header nav #menu-close {
+        display: block;
+        background: transparent;
+        border: none;
+        outline: none;
+        position: absolute;
+        right: 1.25rem;
+        top: 1.25rem;
+        z-index: 999999999999;
+        cursor: pointer;
+      }
+
+    .header .menu-button button {
+        background: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
 
     .container{
         display: grid;
